@@ -25,13 +25,18 @@
 }
 
 .projectcontainer {
-    display: flex;
-    gap: 1rem;
     margin: 1rem;
+    gap: 3rem;
     padding: 3rem;
     align-items: stretch;
     border: 3px gray solid;
     border-radius: 10%;
+}
+
+.projectview {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
 }
 
 .projectimage {
@@ -40,10 +45,82 @@
     height: auto;
 }
 
-.projectdesc {
-    flex: 1;
+/* components/TechStack.css */
+
+.techstack {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-items: stretch;
+}
+
+.techitem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.techicon {
+    font-size: 1.25rem;
+    /* ~20px */
+}
+
+.techname {
+    display: inline-block;
+}
+
+.dropdownWrapper {
+  position: relative;
+  min-width: 250px;
+  font-family: Arial, sans-serif;
+  padding: 1rem;
+}
+
+.dropdownHeader {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+}
+
+.dropdownList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 4px;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  background-color: #000;
+}
+
+.dropdownItem {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+}
+
+.dropdownItem:hover {
+  border: 1px solid #ccc;
+}
+
+.icon {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.arrow {
+  margin-left: 8px;
+  font-size: 12px;
 }

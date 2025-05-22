@@ -6,7 +6,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.image}></div>
       <div>
-        <h1>Sebastian Sumiński</h1>
+        <h1>WITAm</h1>
         <h3>React Native Developer</h3>
         <div className={styles.header}>
           <h5>Github</h5>
