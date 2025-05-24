@@ -28,7 +28,6 @@ export default function ProjectSection({ techStack, techList }: Props) {
                     key={i}
                     title={item.title}
                     description={item.description}
-                    image={item.image}
                     github_link={item.github_link}
                     techStack={item.techStack}
                     prod_link={item.prod_link}

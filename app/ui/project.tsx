@@ -1,12 +1,13 @@
-import Image from "next/image"
-import styles from "../style.module.css"
-import { ProjectType, Tech } from '../utils/type'
-import TechStack from "./techStack"
+import Image from "next/image";
+import styles from "../style.module.css";
+import { ProjectType, Tech } from '../utils/type';
+import TechStack from "./techStack";
+import Link from "next/link";
 
 export const techStack: Tech[] = [
     { name: 'React', class: 'devicon-react-original colored' },
-    { name: 'Next.js', class: 'devicon-nextjs-original' }, // black & white
-    { name: 'React Native', class: 'devicon-react-original colored' }, // uses React icon
+    { name: 'Next.js', class: 'devicon-nextjs-original' },
+    { name: 'React Native', class: 'devicon-react-original colored' },
     { name: 'TypeScript', class: 'devicon-typescript-plain colored' },
     { name: 'JavaScript', class: 'devicon-javascript-plain colored' },
     { name: 'Tailwind CSS', class: 'devicon-tailwindcss-plain colored' },
@@ -16,26 +17,39 @@ export const techStack: Tech[] = [
     { name: 'Docker', class: 'devicon-docker-plain colored' },
 ];
 
-
 export default function Project(props: ProjectType) {
     return (
         <div className={styles.projectcontainer}>
             <h2>{props.title}</h2>
             <div className={styles.projectview}>
-                <p>{props.github_link}</p>
-                {props?.prod_link || <p>{props.prod_link}</p>}
+                <Link href={props.github_link} target="_blank" rel="noopener noreferrer" style={{ color: '#1d4ed8' }}>
+                    GitHub Repo
+                </Link>
+                {props.prod_link && (
+                    <Link href={props.prod_link} target="_blank" rel="noopener noreferrer" style={{ color: '#1d4ed8' }}>
+                        Live Demo
+                    </Link>
+                )}
             </div>
 
             <TechStack tech={props.techStack} />
 
             <div className={styles.projectview}>
-                <div >
-                    <img alt="Project photo" className={styles.projectimage} src={props.image} width={384} height={216} />
-                </div>
-                <div >
+                {props.image && (
+                    <div>
+                        <Image
+                            alt="Project photo"
+                            className={styles.projectimage}
+                            src={props.image}
+                            width={384}
+                            height={216}
+                        />
+                    </div>
+                )}
+                <div>
                     <p>{props.description}</p>
                 </div>
             </div>
         </div>
-    )
+    );
 }
