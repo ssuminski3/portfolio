@@ -4,6 +4,8 @@ import styles from './style.module.css'
 import ProjectSection from './ui/ProjectSection'; // new client component
 import { getProjectsWithTech, getAllTech } from "./utils/data";
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
   const techStack = await getProjectsWithTech();
   const techList = await getAllTech();
