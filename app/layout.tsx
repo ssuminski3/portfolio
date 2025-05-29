@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "React Native Developer",
-  description: "Portfolio of React Native Developer",
+  title: "Fullstack developer",
+  description: "Portfolio of Fullstack Developer",
 };
 
 export default function RootLayout({

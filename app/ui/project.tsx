@@ -20,13 +20,13 @@ export const techStack: Tech[] = [
 export default function Project(props: ProjectType) {
     return (
         <div className={styles.projectcontainer}>
-            <h2>{props.title}</h2>
-            <div className={styles.projectview}>
-                <Link href={props.github_link} target="_blank" rel="noopener noreferrer" style={{ color: '#1d4ed8' }}>
+            <h1>{props.title}</h1>
+            <div style={{display: "flex", padding: 5}}>
+                <Link href={props.github_link} target="_blank" rel="noopener noreferrer" style={{ color: '#1d4ed8', padding: 5 }}>
                     GitHub Repo
                 </Link>
                 {props.prod_link && (
-                    <Link href={props.prod_link} target="_blank" rel="noopener noreferrer" style={{ color: '#1d4ed8' }}>
+                    <Link href={props.prod_link} target="_blank" rel="noopener noreferrer" style={{ color: '#1d4ed8', padding: 5 }}>
                         Live Demo
                     </Link>
                 )}
@@ -41,12 +41,12 @@ export default function Project(props: ProjectType) {
                             alt="Project photo"
                             className={styles.projectimage}
                             src={props.image}
-                            width={384}
-                            height={216}
+                            width={500}
+                            height={500}
                         />
                     </div>
                 )}
-                <div>
+                <div className={styles.projectDesc}>
                     <p>{props.description}</p>
                 </div>
             </div>

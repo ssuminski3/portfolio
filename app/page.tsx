@@ -20,7 +20,7 @@ export default async function Home() {
             I’m an aspiring JavaScript/TypeScript developer with 5 years of programming experience, including Python automation, one year in game development, and 2.5 years working with React and React Native to build mobile and web applications.
           </p>
           <p style={{ paddingTop: '1rem' }}>
-            I hold INF03 and INF04 certifications and have completed two internships: a total of three months at Polkomtel (across separate terms) and a one-month Erasmus+ internship in Spain. My personal projects — all available below and on my GitHub — are practical, user-focused, and built to solve real-world problems, showcasing my skills
+            I hold INF03 and INF04 certifications and have completed two internships: a total of three months at Polkomtel and a one-month Erasmus+ internship in Spain. My personal projects — all available below and on my GitHub — are practical, user-focused, and built to solve real-world problems, showcasing my skills
           </p>
         </div>
       </div>

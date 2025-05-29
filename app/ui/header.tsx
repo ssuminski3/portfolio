@@ -32,7 +32,7 @@ export default function Header() {
       />
       <div>
         <h1>Sebastian Sumiński</h1>
-        <h3>React Native Developer</h3>
+        <h3>Fullstack Developer</h3>
         <div className={styles.links}>
           <Link href="https://github.com/ssuminski3" target="_blank" rel="noopener noreferrer">
             <i className={`${iconClass("devicon-github-original")} ${styles.icon}`}></i>
