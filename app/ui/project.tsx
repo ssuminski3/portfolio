@@ -21,7 +21,7 @@ export default function Project(props: ProjectType) {
     return (
         <div className={styles.projectcontainer}>
             <h1>{props.title}</h1>
-            <div style={{display: "flex", padding: 5}}>
+            <div style={{ display: "flex", padding: 5 }}>
                 <Link href={props.github_link} target="_blank" rel="noopener noreferrer" style={{ color: '#1d4ed8', padding: 5 }}>
                     GitHub Repo
                 </Link>
@@ -39,10 +39,15 @@ export default function Project(props: ProjectType) {
                     <div>
                         <Image
                             alt="Project photo"
-                            className={styles.projectimage}
                             src={props.image}
-                            width={500}
-                            height={500}
+                            objectFit="cover"
+                            className={styles.projectimage}
+                            layout="responsive"
+                            width={300}
+                            height={300}
+                            sizes="(max-width: 768px) 100vw,
+                                    (max-width: 300px) 10vw
+                                    (max-width: 1200px) 50vw,"
                         />
                     </div>
                 )}

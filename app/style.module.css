@@ -53,6 +53,11 @@
     object-fit: contain;
 }
 
+.containProjectImage {
+    width: 100%;
+    position: relative;
+}
+
 .projectDesc {
     display: flex;
     justify-content: center;
